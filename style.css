@@ -1,0 +1,148 @@
+.box{
+    border-radius: 6px;
+    width: 80px;
+    height: 40px;
+    margin: 50px auto;
+}
+
+.box-uno{
+    background-color: mediumaquamarine;
+}
+
+.box-dos{
+    background-color: mediumpurple; 
+    /* Transition tiene 2 valores, transition-property y transition-duration, aunque podemos escribirlos  en transition, primero se toma el valor de property, despues el de duration */
+    transition: all 0.5s;             
+}
+
+.box:hover{
+    transform: scale(4);
+}
+
+.container-circle div{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}
+
+.container-circle:hover .circle1,
+.container-circle:hover .circle2,
+.container-circle:hover .circle3,
+.container-circle:hover .circle4,
+.container-circle:hover .circle5{
+    transform: translateX(200px);
+}
+
+/* curva de velocidad */
+
+.circle1{
+    background-color: mediumaquamarine;
+    transition: all 1.5s linear;
+}
+
+.circle2{
+    background-color: mediumblue;
+    transition: all 1.5s ease-in;
+}
+
+.circle3{
+    background-color: mediumorchid;
+    transition: all 1.5s ease-in-out;
+}
+
+.circle4{
+    background-color: mediumpurple;
+    transition: all 1.5s ease-out;
+}
+
+.circle5{
+    background-color: mediumseagreen;
+    transition: all 1.5s ease;
+}  
+
+.square-uno, .square-dos{
+    border-radius: 4px;
+    height: 150px;
+    width: 150px;
+    margin: 100px;
+    position: absolute;
+}
+
+.square-uno{
+    background-color: mediumturquoise;
+}
+
+.square-dos{
+    background-color: mediumvioletred;
+    transition: all 1s;
+}
+
+.square-dos:hover {
+    transform: translate(40px, 40px);
+    opacity: 0.1;
+}
+
+.combinado{
+    background-color: violet;
+    height: 75px;
+    width: 75px;
+    margin: 50px auto;
+    transition: all 2s ;
+}
+
+.combinado:hover{
+    transform: rotate(90deg) scale(2) translate(120px, 120px);
+
+    /* prefijos - sirve para que las animaciones anden en todos los navegadores */
+    /* Chrome & Edge */
+    -webkit-transform: transform rotate(90deg) scale(2) translateX(120px);
+    /* Opera */
+    -o-transform: transform rotate(90deg) scale(2) translateX(120px);
+    /* Mozilla */
+    -moz-transform: transform rotate(90deg) scale(2) translateX(120px);
+}
+
+
+.animaciones{
+    width: 120px;
+    height: 120px;
+    margin: 50px auto;
+    background-color: mediumslateblue
+}
+
+.animaciones:hover{
+    /* animation-name, animation-duration, las 2 se pueden escribir en animation, como abajo */
+    animation: changeColor 0.00001s infinite;
+}
+
+/* controlar los fotogramas de la animación */
+@keyframes changeColor{
+    0%{
+        background-color: mediumorchid;
+    }
+
+    15%{
+        background-color: mediumpurple;
+        border-radius: 80px;
+    }
+
+    25%{
+        width: 80%;
+    }
+
+    50%{
+        border: 8px solid black;
+    }
+
+    100%{
+        background-color: mediumaquamarine
+    }
+
+}
+  
+
+
+
+
+
