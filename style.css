@@ -31,7 +31,7 @@
 .container-circle:hover .circle3,
 .container-circle:hover .circle4,
 .container-circle:hover .circle5{
-    transform: translateX(200px);
+    transform: translateX(199px);
 }
 
 /* curva de velocidad */
